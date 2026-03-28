@@ -1,0 +1,16 @@
+[Unit]
+Description=WolWeb host server (WOL website for ackmud.com)
+After=network.target
+
+[Service]
+Type=simple
+User=wol-web
+WorkingDirectory=/opt/wol-web
+ExecStart=/opt/wol-web/publish/WolWeb.Host
+Environment=DOTNET_ROOT=/usr/share/dotnet
+Environment=ASPNETCORE_URLS=http://0.0.0.0:5000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
