@@ -1,0 +1,7 @@
+name: web-wol
+language: csharp
+build: dotnet build WolWeb.sln
+test: dotnet test WolWeb.sln
+definition_of_done:
+  - build succeeds
+  - tests pass
